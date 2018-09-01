@@ -1,0 +1,26 @@
+{
+  "name": "rfc5646-lang-map",
+  "version": "1.0.0",
+  "description": "a map of rfc-5646 language codes to their English and native names",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rfc5646",
+    "language",
+    "codes",
+    "names",
+    "convert",
+    "internationalization",
+    "intl",
+    "ietf",
+    "languages",
+    "lang",
+    "tag",
+    "native",
+    "map"
+  ],
+  "author": "Konrad <konradsoftwareengineer@gmail.com>",
+  "license": "MIT"
+}
