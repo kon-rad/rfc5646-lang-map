@@ -1,19 +1,20 @@
+import MAP from './data';
 
-
-
-export default class LangCode {
+export  class LangCode {
 
   static getLanguageName(code) {
-    return 'hello world';
+
+    return this.validateLanguageCode(code) ? MAP[code].name : '';
   }
 
   static getLanguageNativeName(code) {
-    return 'hello world';
+
+    return this.validateLanguageCode(code) ? MAP[code].native : '';
 
   }
 
   static validateLanguageCode(code) {
-    return 'hello world';
 
+    return MAP.hasOwnProperty(code);
   }
 }
