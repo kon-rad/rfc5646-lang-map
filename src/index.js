@@ -1,19 +1,19 @@
 import MAP from './data';
 
-export  class LangCode {
+export class LangCode {
 
-  static getLanguageName(code) {
+  static getName(code) {
 
-    return this.validateLanguageCode(code) ? MAP[code].name : '';
+    return this.validateCode(code) ? MAP[code].name : '';
   }
 
-  static getLanguageNativeName(code) {
+  static getNativeName(code) {
 
-    return this.validateLanguageCode(code) ? MAP[code].native : '';
+    return this.validateCode(code) ? MAP[code].native : '';
 
   }
 
-  static validateLanguageCode(code) {
+  static validateCode(code) {
 
     return MAP.hasOwnProperty(code);
   }
