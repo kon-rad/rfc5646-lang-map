@@ -1,6 +1,6 @@
 import MAP from './data';
 
-export class LangCode {
+export default class LangCode {
 
   static getName(code) {
 
