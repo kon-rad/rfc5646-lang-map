@@ -1,16 +1,21 @@
 const path = require('path');
-require("babel-register");
+const webpack = require('webpack');
+
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'main.build.js'
+    filename: '[name].js',
+    library: 'RFC5646',
+    libraryTarget: 'umd',
+    globalObject: 'this'
   },
   resolve: {
     modules: ['node_modules']
   },
-
+  devtool: 'cheap-source-map',
   module: {
     rules: [
       {
@@ -19,18 +24,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              [
-                "@babel/preset-env",
-                {
-                  "useBuiltIns": "entry"
-                }
-              ]
-            ],
             plugins: ['add-module-exports'],
           }
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new CleanWebpackPlugin(['./build']),
+  ],
 };

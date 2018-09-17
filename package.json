@@ -4,7 +4,7 @@
   "description": "a map of rfc-5646 language codes to their English and native names",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --compilers js:@babel/register",
     "build": "webpack",
     "lint": "eslint ."
   },
@@ -26,7 +26,6 @@
   "author": "Konrad <konradsoftwareengineer@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.0",
@@ -39,6 +38,9 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0"
+    "@babel/core": "^7.0.1",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "clean-webpack-plugin": "^0.1.19"
   }
 }
