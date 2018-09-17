@@ -93,7 +93,7 @@ const MAP = {
   'fr-BE': {name: 'French (Belgium)', native: ''},
   'fr-CA': {name: 'French (Canada)', native: ''},
   'fr-CH': {name: 'French (Switzerland)', native: ''},
-  'fr-FR': {name: 'French (France)', native: ''},
+  'fr-FR': {name: 'French (France)', native: 'Français'},
   'fr-LU': {name: 'French (Luxembourg)', native: ''},
   'fr-MC': {name: 'French (Principality of Monaco)', native: ''},
   gl: {name: 'Galician', native: ''},
